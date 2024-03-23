@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Questionaire">
+
+        <TextView
+            android:id="@+id/winnings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="56dp"
+            android:text="Earnings Placeholder"
+            android:textColor="#464D77"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/radio_choice"
+            android:layout_margin="30dp"
+            android:layout_marginTop="48dp"
+            android:text="Question Text"
+            android:textAlignment="center"
+            android:textColor="#51514E"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <RadioGroup
+            android:id="@+id/radio_choice"
+            android:layout_width="284dp"
+            android:layout_height="232dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/question">
+
+            <RadioButton
+                android:id="@+id/ans_A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/radio_selector"
+                android:checked="false"
+                android:text="Ans A text"
+                android:textAlignment="viewStart"
+                android:textSize="18dp" />
+
+            <RadioButton
+                android:id="@+id/ans_B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:checked="false"
+                android:background="@drawable/radio_selector"
+                android:text="Ans B text"
+                android:textSize="18dp" />
+
+            <RadioButton
+                android:id="@+id/ans_C"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:checked="false"
+                android:background="@drawable/radio_selector"
+                android:text="Ans C text"
+                android:textSize="18dp" />
+
+            <RadioButton
+                android:id="@+id/ans_D"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:checked="false"
+                android:background="@drawable/radio_selector"
+                android:text="Ans D text"
+                android:textSize="18dp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="207dp"
+            android:layout_height="55dp"
+            android:layout_below="@id/radio_choice"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="40dp"
+            android:onClick="checkAnswer"
+            android:text="CONFIRM"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            app:cornerRadius="0.12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_choice"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/winnings"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
